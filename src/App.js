@@ -69,7 +69,7 @@ function App() {
             }
         }
 
-    }, [])
+    }, []) 
 
     let routes;
     let loggedIn = user.username
