@@ -1,0 +1,33 @@
+.brown{
+  background-color: rgb(65, 26, 26);
+  height: 100%;
+}
+
+.coffee-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Display{
+  display: flex;
+  flex-direction: row;
+  font-size: 3vh;
+}
+
+.around{
+  margin: 3vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+*{
+  color: white;
+}
+
+h3{
+  padding: 3vh;
+}
+
+
