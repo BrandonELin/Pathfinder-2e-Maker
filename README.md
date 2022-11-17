@@ -1,71 +1,62 @@
-# Getting Started with Create React App
+# WayFinder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+https://unusual-deer-dungarees.cyclic.app
 
-In the project directory, you can run:
+Welcome to Wayfinder, your home for Pathfinder 2e knowledge and home to your future characters.
 
-### `npm start`
+This was created as part of a project at Per Scholas to create a MERN stack based website.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This website uses an The PF2e OGL content API by Ravel (https://api.pathfinder2.fr/) to bring information on the ABC's of character creation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ancestry
+Background
+And Class.
 
-### `npm test`
+In addition, those who login to account will also have access to a character creator where they can make as many characters as their heart desires.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What is Pathfinder 2e
 
-### `npm run build`
+Pathfinder 2e is a Table Top Role-playing game or TTRPG made by Paizo. The original edition was an extension of the popular game Dungeons and Dragons and this new version expands upon the systems and really comes into it's own. At it's core, it is a fantasy role playing game known for it's extensive customization.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The website will be very useful for people looking to get into Pathfinder 2e to learn about it and make characters.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies
 
-### `npm run eject`
+-JavaScript
+-React
+-Mongoose
+-Express
+-Bootstrap
+-NPM
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technical Challenges
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The JWT has been difficult overall and sometimes still malfunctions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+and the deployment has been a major issue.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Plans for the Future
 
-## Learn More
+I hope to eventually incorpate the more extensive parts of Pathfinder 2e's character creation such as feats and equipment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I also hope to have implementation of Authorization features.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I hope to make the website look better as at the moment it is a bit rough to look at
 
-### Code Splitting
+but I also hope that I can put more of my own flair into it
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Special Thanks
 
-### Analyzing the Bundle Size
+Thank you to Ravel for the API (https://api.pathfinder2.fr/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Thank you to Paizo, the creators of Pathfinder 2e.
 
-### Making a Progressive Web App
+Pathfinder is a registered trademark of Paizo Publishing, LLC
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Pathfinder-2e-Maker
+[MIT] (https://choosealicense.com/licenses/mit/)
