@@ -3,6 +3,7 @@ const CharacterModel = require('../models/Character')
 const index = async (req, res) => {
     try {
         const foundCurrentUsersCharacters = await CharacterModel.find({ user: req.user })
+        console.log(req.user)
         res.status(200).json({ characters: foundCurrentUsersCharacters })
     } catch (error) {
         res.status(400).json({ error: error.message })

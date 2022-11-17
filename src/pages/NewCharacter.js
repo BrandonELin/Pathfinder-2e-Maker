@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import characterService from '../services/characterService'
@@ -10,16 +11,11 @@ function Characters ({ user, characters, setCharacters }) {
         try {
             const response = await characterService.index()
             setCharacters(response.data.characters)
+            console.log(characters)
         } catch (error) {
             console.log(error)
         }
     }
-
-    const editCharacter = (id) => {
-        navigate(`/${id}`)
-    }
-
-    const navigate = useNavigate()
 
     useEffect(() => {
         getAllCharacters()

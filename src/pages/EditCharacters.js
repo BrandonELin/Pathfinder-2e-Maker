@@ -11,22 +11,20 @@ function EditCharacters ({ user,classes, background, ancestries, getClasses, get
     let backgroundRef = useRef()
     let classRef = useRef()
     let params = useParams()
+    const [character, setCharacter] = useState([])
 
-    let currentCharacter = characters.find(x => x._id == params.id)
-    console.log(characters)
-    console.log(currentCharacter)
-
-    const getAllCharacters = async () => {
+    const getCharacter = async () => {
         try {
-            const response = await characterService.index()
-            setCharacters(response.data.characters)
+            const response = await characterService.getCharacter(params.id)
+            setCharacter(response.data.character)
+            console.log(response)
         } catch (error) {
             console.log(error)
         }
     }
 
     useEffect(() => {
-        getAllCharacters()
+        getCharacter()
     }, [])
 
     useEffect(() => {
@@ -47,7 +45,7 @@ function EditCharacters ({ user,classes, background, ancestries, getClasses, get
         }
 
         try {
-            const response = await characterService.updateUsersCharacter(params.id, newCharacter)
+            const response = await characterService.editCharacter(params.id, newCharacter)
             navigate('/characters')
         } catch (error) {
             console.log(error)
@@ -71,12 +69,12 @@ function EditCharacters ({ user,classes, background, ancestries, getClasses, get
 
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>
-                <input type="text" ref={nameRef} defaultValue={currentCharacter.name}/><br />
+                <input type="text" ref={nameRef} defaultValue={character.name}/><br />
                 <label>Ancestry:</label>
                 <select id="genre" name="genre" ref={ancestryRef}>
                     {ancestries.map((a) => {
                         return(
-                            <option key={a._id} value={a.name} defaultValue={currentCharacter.ancestry} >{a.name}</option>
+                            <option key={a._id} value={a.name} defaultValue={character.ancestry} >{a.name}</option>
                         )
                     })}
                 </select> <br/>
@@ -84,7 +82,7 @@ function EditCharacters ({ user,classes, background, ancestries, getClasses, get
                 <select id="genre" name="genre" ref={backgroundRef}>
                     {background.map((b) => {
                         return(
-                            <option key={b._id} value={b.name} defaultValue={currentCharacter.background}>{b.name}</option>
+                            <option key={b._id} value={b.name} defaultValue={character.background}>{b.name}</option>
                         )
                     })}
                 </select> <br/>
@@ -92,7 +90,7 @@ function EditCharacters ({ user,classes, background, ancestries, getClasses, get
                 <select id="genre" name="genre" ref={classRef}>
                     {classes.map((c) => {
                         return(
-                            <option key={c._id} value={c.name} defaultValue={currentCharacter.class}>{c.name}</option>
+                            <option key={c._id} value={c.name} defaultValue={character.class}>{c.name}</option>
                         )
                     })}
                 </select> <br/>

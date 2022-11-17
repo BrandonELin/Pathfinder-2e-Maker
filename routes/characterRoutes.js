@@ -5,6 +5,7 @@ const characterCtrl = require('../controllers/characterController')
 router.get('/index', characterCtrl.index)
 router.post('/add', characterCtrl.add)
 router.delete('/:id/delete', characterCtrl.deleteCharacter)
-router.put('/:id/edit', characterCtrl.editCharacter)
+router.put('/:id/edit', characterCtrl.updateOneCharacter)
+router.get('/:id', characterCtrl.editCharacter)
 
 module.exports = router
