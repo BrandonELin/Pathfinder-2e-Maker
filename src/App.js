@@ -8,7 +8,10 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import Characters from "./pages/Characters";
+import EditCharacters from "./pages/EditCharacters";
 import Classes from "./pages/Classes";
+import Ancestries from "./pages/Ancestries";
+import Background from "./pages/Background";
 import userService from './services/userService'
 import NewCharacter from "./pages/NewCharacter";
 
@@ -131,6 +134,10 @@ function App() {
                     />
                     <Route path='/newCharacter' element={<Characters user={user.username} ancestries={ancestries} background={background} classes={classes} getClasses={getClasses} getAncestries={getAncestries} getBackground={getBackground} characters={characters} setCharacters={setCharacters}/>} />
                     <Route path='Characters' element={<NewCharacter user={user.username} characters={characters} setCharacters={setCharacters} />}/>
+                    <Route path="/classes" element={<Classes classes={classes} getClasses={getClasses} />} />
+                    <Route path="/ancestries" element={<Ancestries ancestries={ancestries} getAncestries={getAncestries} />} />
+                    <Route path="/background" element={<Background background={background} getBackground={getBackground} />} />
+                    <Route path="/:id" element={<EditCharacters user={user.username} ancestries={ancestries} background={background} classes={classes} getClasses={getClasses} getAncestries={getAncestries} getBackground={getBackground} characters={characters} setCharacters={setCharacters} />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             )
@@ -142,8 +149,8 @@ function App() {
                     <Route path="/register" element={<Register setUser={setUser} />} />
                     <Route path="*" element={<Navigate to="/login" />} />
                     <Route path="/classes" element={<Classes classes={classes} getClasses={getClasses} />} />
-                    {/* <Route path="/ancestries" element={<Ancestries ancestries={ancestries} getAncestries={getAncestries} />} />
-                    <Route path="/background" element={<Background background={background} getBackground={getBackground} />} /> */}
+                    <Route path="/ancestries" element={<Ancestries ancestries={ancestries} getAncestries={getAncestries} />} />
+                    <Route path="/background" element={<Background background={background} getBackground={getBackground} />} />
                 </Routes> 
             )
         }

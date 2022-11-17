@@ -20,9 +20,19 @@ const add = (newCharacter) => {
     return axiosCharacters().post('/add', newCharacter)
 }
 
+const deleteCharacter = (id) => {
+    return axiosCharacters().delete(`/${id}/delete`)
+}
+
+const editCharacter = (id, newCharacter) => {
+    return axiosCharacters().put(`/${id}/edit`, newCharacter)
+}
+
 const services = {
     index,
-    add
+    add,
+    deleteCharacter,
+    editCharacter
 }
 
 export default services

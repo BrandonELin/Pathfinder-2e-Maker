@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .classes{
   display: flex;
   flex-direction: row;
@@ -12,7 +16,6 @@
 
 .class{
   margin: 10px;
-  padding: 10px
 }
 
 .Display{
@@ -27,4 +30,15 @@
   justify-content: space-around;
 }
 
+.app{
+  background-color: #5C4033;
+}
+
+.black{
+  padding: 10px;
+}
+
+.header{
+  font-size: 22px;
+}
 

@@ -18,7 +18,37 @@ const add = async (req, res) => {
     }
 }
 
+const deleteCharacter = async (req, res) => {
+    try {
+        const deleteUsersCharacter = await CharacterModel.findByIdAndDelete(req.params.id) // req.body -->  { notes: '', user: '' }
+        res.status(200).json({ character: deleteUsersCharacter })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
+
+const editCharacter = async (req, res) => {
+    try {
+        const editCharacter = await CharacterModel.findById(req.params.id)
+        res.status(200).json({ character: editCharacter })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
+
+const updateOneCharacter = async (req, res) => {
+    try {
+        const updateUsersCharacter = await CharacterModel.findByIdAndUpdate(req.params.id, req.body)
+        res.status(200).json({ character: updateUsersCharacter })
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
+
 module.exports = {
     index, 
-    add
+    add,
+    deleteCharacter,
+    updateOneCharacter,
+    editCharacter
 }

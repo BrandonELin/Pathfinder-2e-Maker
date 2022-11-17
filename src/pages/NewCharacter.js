@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import characterService from '../services/characterService'
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 function Characters ({ user, characters, setCharacters }) {
 
@@ -13,6 +14,12 @@ function Characters ({ user, characters, setCharacters }) {
             console.log(error)
         }
     }
+
+    const editCharacter = (id) => {
+        navigate(`/${id}`)
+    }
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         getAllCharacters()
@@ -30,15 +37,17 @@ function Characters ({ user, characters, setCharacters }) {
             }}>
                 {characters.map((c) =>{
                     return(
-                        <Card key={c._id}>
-                            <Card.Title>{c.name}</Card.Title>
+                        <Card key={c._id} className="bg-dark text-white" style={{width: '30vw'}}>
+                            <Card.Title >{c.name}</Card.Title>
                             Ancestry: {c.ancestry} <br/>
                             Background: {c.background} <br/>
                             Class: {c.class} <br/>
+                            <Button href={`${c._id}`}>Edit</Button>
                         </Card>
                     )
                 })}
             </ol>
+            <Button href='/newCharacter'>New Character</Button>
         </div>
     );
 }

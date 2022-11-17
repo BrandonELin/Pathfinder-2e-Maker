@@ -28,6 +28,15 @@ function Navigationbar({ user, setUser }) {
                             <Nav.Link as={Link} to="/Profile">
                                 Profile
                             </Nav.Link>
+                            <Nav.Link as={Link} to="/classes">
+                                Classes
+                            </Nav.Link>
+                            <Nav.Link as={Link} to="/background">
+                                Background
+                            </Nav.Link>
+                            <Nav.Link as={Link} to="/ancestries">
+                                Ancestries
+                            </Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>
