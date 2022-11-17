@@ -4,7 +4,7 @@
 
 https://unusual-deer-dungarees.cyclic.app
 
-Welcome to Wayfinder, your home for Pathfinder 2e knowledge and home to your future characters.
+Welcome to Wayfinder, your home for Pathfinder 2e knowledge and home to your future Pathfinder characters.
 
 This was created as part of a project at Per Scholas to create a MERN stack based website.
 
