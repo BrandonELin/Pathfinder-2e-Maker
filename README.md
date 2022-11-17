@@ -1,4 +1,4 @@
-# WayFinder
+# Wayfinder
 
 ## Description
 
