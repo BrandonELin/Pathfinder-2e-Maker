@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 
 const createToken = (payload) => {
-    console.log(process.env.JWT_SECRET)
     return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' })
 }
 
@@ -12,12 +11,12 @@ const createToken = (payload) => {
 const register = async (req, res) => {
 
     try {
-
         const foundUser = await User.findOne({ username: req.body.username })
 
         if (foundUser) {
             return res.status(400).json({ error: 'User already exists' })
         }
+
 
         const salt = await bcrypt.genSalt(10)
         const encryptedPassword = await bcrypt.hash(req.body.password, salt)
@@ -26,7 +25,6 @@ const register = async (req, res) => {
 
         const payload = { id: newUser._id, user: newUser.username }
         const token = createToken(payload)
-        console.log(token)
 
         res.status(200).json({ token })
 

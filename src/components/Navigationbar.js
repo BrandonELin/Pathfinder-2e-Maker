@@ -22,7 +22,7 @@ function Navigationbar({ user, setUser }) {
                             Welcome {user}!
                         </Navbar.Text>
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/todos">
+                            <Nav.Link as={Link} to="/characters">
                                 Characters
                             </Nav.Link>
                             <Nav.Link as={Link} to="/Profile">
@@ -51,6 +51,9 @@ function Navigationbar({ user, setUser }) {
                             </Nav.Link>
                             <Nav.Link as={Link} to="/register">
                                 Register
+                            </Nav.Link>
+                            <Nav.Link as={Link} to="/classes">
+                                Classes
                             </Nav.Link>
                         </Nav>
                     </Container>

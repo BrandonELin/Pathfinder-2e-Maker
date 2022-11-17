@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 export default function Classes({ list, getClasses }){
     let params = useParams();
 
-    useEffect(() => {getClasses('class')},[])
+    useEffect(() => {getClasses('ancestry')},[])
 
     return (
         <div className="classes">
@@ -15,12 +15,7 @@ export default function Classes({ list, getClasses }){
                         <Card style={{ width: '30vw' }} className='class'>
                             <Card.Title>{item.name}</Card.Title>
                             <Card.Text>
-                                {item.data.description.value.toUpperCase().split('KEY ABILITY',1).map((word) => {
-                                    word = word.split('<P>').join('')
-                                    word = word.split('<EM>').join('')
-                                    word = word.split('</EM>').join('')
-                                    word = word.split('</P>').join('')
-                                    word = word.replace('<STRONG>', '')
+                                {item.data.description.value.toUpperCase().split('</P>',1).map((word) => {
                                     console.log(word)
                                     return(
                                         word

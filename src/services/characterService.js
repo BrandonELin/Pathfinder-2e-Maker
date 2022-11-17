@@ -5,19 +5,19 @@ const getToken = () => {
     return token ? token : ''
 }
 
-const axiosTodos = () => axios.create({
-    baseURL: 'http://localhost:8080/todos',
+const axiosCharacters = () => axios.create({
+    baseURL: 'http://localhost:8080/characters',
     headers: {
         'Authorization': `Bearer ${getToken()}`
     }
 })
 
 const index = () => {
-    return axiosTodos().get('/index')
+    return axiosCharacters().get('/index')
 }
 
-const add = (newTodo) => {
-    return axiosTodos().post('/add', newTodo)
+const add = (newCharacter) => {
+    return axiosCharacters().post('/add', newCharacter)
 }
 
 const services = {

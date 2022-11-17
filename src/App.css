@@ -3,11 +3,16 @@
   height: 100%;
 }
 
-.coffee-view{
+.classes{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.class{
+  margin: 10px;
+  padding: 10px
 }
 
 .Display{
@@ -20,14 +25,6 @@
   margin: 3vh;
   display: flex;
   justify-content: space-around;
-}
-
-*{
-  color: white;
-}
-
-h3{
-  padding: 3vh;
 }
 
 

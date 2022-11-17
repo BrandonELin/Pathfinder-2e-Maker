@@ -1,13 +1,11 @@
 const User = require('../models/User')
 
 const info = async (req, res) => {
-    // req.params.username
-    // req.userId
     console.log('made it to our route!')
     console.log('user id:', req.userId)
     try {
         const foundUser = await User.findById(req.userId)
-        
+        console.log(foundUser, 'hi')
         res.status(200).json({ 
             username: foundUser.username, 
             email: foundUser.email 
