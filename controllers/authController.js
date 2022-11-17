@@ -7,6 +7,10 @@ const createToken = (payload) => {
     return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' })
 }
 
+function hello(){
+    console.log('hello')
+}
+
 
 const register = async (req, res) => {
 
