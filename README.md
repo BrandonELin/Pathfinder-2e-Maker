@@ -15,6 +15,7 @@ Background
 And Class.
 
 In addition, those who login to account will also have access to a character creator where they can make as many characters as their heart desires.
+As well as edit them whenever and make room for more instantly.
 
 ## What is Pathfinder 2e
 
